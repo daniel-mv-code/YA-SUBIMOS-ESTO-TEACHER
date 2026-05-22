@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Mecánica - Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <nav id="barra_busqueda">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Quiénes Somos</a>
+        <a href="login.html">Login</a>
+        <a href="registro.html" style="background-color: #444; font-weight: bold;">Registro</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="panel.html">Panel</a>
+    </nav>
+
+    <header id="seccion_h1">
+        <h1>Crear Cuenta</h1>
+        <p>Regístrate para empezar a administrar tu taller de forma inteligente.</p>
+    </header>
+
+    <main class="contenedor-cajas">
+        <div class="carta_informacion caja-content" style="width: 100%; max-width: 450px;">
+            <form style="display: flex; flex-direction: column; width: 100%;">
+                <h2>Formulario de Registro</h2>
+                <br>
+                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Nombre Completo:</label>
+                <input type="text" class="input-formulario" placeholder="Juan Pérez" required>
+
+                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Nombre del Taller:</label>
+                <input type="text" class="input-formulario" placeholder="Mecánica Express" required>
+                
+                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Correo Electrónico:</label>
+                <input type="email" class="input-formulario" placeholder="juan@taller.com" required>
+                
+                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Contraseña:</label>
+                <input type="password" class="input-formulario" placeholder="Mínimo 6 caracteres" required>
+                
+                <br>
+                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Registrarme</button>
+            </form>
+            <span class="etiqueta">Nuevo Usuario</span>
+        </div>
+    </main>
+
+    <footer id="principal_papi">
+        <p>© 2026 Sistema de Gestión Mecánica - Proyecto Formativo SENA</p>
+    </footer>
+
+</body>
+</html>
