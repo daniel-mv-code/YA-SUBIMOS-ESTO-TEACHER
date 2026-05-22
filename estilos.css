@@ -1,165 +1,232 @@
 /* ==========================================================================
-   ESTILOS GENERALES
+   ESTILOS GENERALES (MODO OSCURO PREMIUM)
    ========================================================================== */
 * {
-    box-sizing: border-box; /* Estandariza el modelo de caja global */
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background-color: #0f172a; /* Fondo azul oscuro profundo texturizado */
+    color: #f8fafc;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Asegura que el footer se quede abajo si hay poco contenido */
+    min-height: 100vh;
 }
 
 /* ==========================================================================
-   MENÚ PRINCIPAL (IMPLEMENTACIÓN FLEXBOX)
+   MENÚ PRINCIPAL (CON DEGRADADO Y NEÓN)
    ========================================================================== */
 #barra_busqueda {
-    background-color: #222;
-    padding: 10px 20px;
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+    padding: 15px 20px;
+    border-bottom: 2px solid #00bcd4; /* Línea de neón brillante abajo */
     
     display: flex;
-    flex-direction: row;       /* Enlaces en fila horizontal */
-    flex-wrap: wrap;           /* Si el celular es chico, los enlaces bajan ordenados */
-    justify-content: center;   /* Centra los enlaces horizontalmente */
-    align-items: center;       /* Centra los enlaces verticalmente */
-    gap: 15px;                 /* Separación uniforme y limpia entre enlaces */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.15);
 }
 
 #barra_busqueda a {
-    color: white;
+    color: #94a3b8;
     text-decoration: none;
     font-size: 16px;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 30px; /* Estilo píldora */
+    transition: all 0.3s ease;
 }
 
+/* Efecto al pasar el mouse por los enlaces del menú */
 #barra_busqueda a:hover {
-    background-color: #444;
+    color: #ffffff;
+    background-color: rgba(0, 188, 212, 0.2);
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
 }
 
 /* ==========================================================================
-   SECCIÓN DE BIENVENIDA (HERO SECTION)
+   SECCIÓN SECCIÓN DE BIENVENIDA (HERO GLOW EFFECT)
    ========================================================================== */
 #seccion_h1 {
     text-align: center;
-    padding: 50px 20px;
-    background-color: white;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    padding: 60px 20px;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+    margin-bottom: 30px;
     
     display: flex;
-    flex-direction: column;    /* Elementos ordenados verticalmente */
-    align-items: center;       /* Centra el título, texto y botón */
-    gap: 15px;                 /* Espacio controlado entre cada elemento */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 h1 {
-    color: darkblue;
-    font-size: 2.2rem;
+    color: #ffffff;
+    font-size: 2.6rem;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.6); /* Brillo de neón en el título */
+    letter-spacing: 1px;
 }
 
+#seccion_h1 p {
+    color: #94a3b8;
+    font-size: 1.1rem;
+    max-width: 600px;
+}
+
+/* Botón de Acción Llamativo */
 .btn-accion {
     display: inline-block;
-    background-color: darkblue;
-    color: white;
-    padding: 12px 25px;
+    background: linear-gradient(135deg, #00bcd4, #00838f);
+    color: #0f172a;
+    padding: 14px 30px;
     text-decoration: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 50px;
     font-weight: bold;
-    transition: transform 0.2s, background-color 0.2s;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
+    transition: all 0.3s ease;
 }
 
 .btn-accion:hover {
-    background-color: #0000aa;
-    transform: scale(1.03);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
+    filter: brightness(1.1);
 }
 
 /* ==========================================================================
-   CONTENEDOR DE TARJETAS (GRID DE FLEXBOX ADAPTABLE)
+   CONTENEDOR DE TARJETAS (FLEXBOX ADAPTABLE)
    ========================================================================== */
 .contenedor-cajas {
     max-width: 1300px;
     margin: 0 auto;
     padding: 20px;
-    flex-grow: 1;              /* Absorbe el espacio disponible en el body */
+    flex-grow: 1;
     
     display: flex;
-    flex-direction: row;       /* Tarjetas ordenadas en fila horizontal */
-    flex-wrap: wrap;           /* ¡Mágico! Salta de línea si no caben en la pantalla */
-    justify-content: center;   /* Centra el grupo de tarjetas */
-    align-items: stretch;      /* Hace que todas las tarjetas tengan la misma altura */
-    gap: 25px;                 /* Espacio constante entre filas y columnas */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
 }
 
-/* Estilo Base de las Tarjetas */
+/* Estilo Base de las Tarjetas de Información */
 .carta_informacion {
-    width: 280px;              /* Ancho base de diseño */
-    padding: 25px;
-    border: 8px solid #333;
-    border-radius: 8px;        /* Agregado suavizado sutil */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 290px;
+    padding: 30px 25px;
+    border-radius: 16px; /* Bordes más suaves y modernos */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     
     display: flex;
-    flex-direction: column;    /* Alineación interna vertical */
-    justify-content: space-between; /* Distribuye el texto arriba y la etiqueta abajo */
-    gap: 15px;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* Respetando tus reglas de box-sizing previas */
+/* Efecto de elevación interactivo al pasar el mouse por las tarjetas */
+.carta_informacion:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Caja Content-Box (Color Amarillo Eléctrico) */
 .caja-content {
     box-sizing: content-box;
-    background-color: #ffeb3b; 
+    background: linear-gradient(145deg, #2e2a14, #1a180b);
+    border: 3px solid #ffeb3b;
 }
+.caja-content:hover {
+    border-color: #fff176;
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.3);
+}
+.caja-content h2 { color: #ffeb3b; }
 
+/* Caja Border-Box (Color Cian Eléctrico) */
 .caja-border {
     box-sizing: border-box;
-    background-color: #00bcd4; 
+    background: linear-gradient(145deg, #112936, #091720);
+    border: 3px solid #00bcd4;
 }
+.caja-border:hover {
+    border-color: #4dd0e1;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+.caja-border h2 { color: #00bcd4; }
 
+/* Textos dentro de las tarjetas */
 .carta_informacion h2 {
-    color: #222;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .carta_informacion p {
-    color: #444;
-    line-height: 1.5;
+    color: #cbd5e1;
+    line-height: 1.6;
     font-size: 0.95rem;
 }
 
+/* Pequeñas etiquetas abajo */
 .etiqueta {
     font-size: 0.75rem;
-    font-weight: bold;
-    color: #222;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 4px 8px;
-    border-radius: 4px;
-    align-self: flex-start;    /* Ajusta el fondo solo al tamaño del texto */
+    font-weight: 800;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 6px;
+    align-self: flex-start;
     text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* ==========================================================================
-   ELEMENTOS ADICIONALES (FORMULARIOS Y FOOTER)
+   FORMULARIOS RESISTENTES Y LLAMATIVOS
    ========================================================================== */
 .input-formulario {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
+.input-formulario:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.4);
+    background-color: #1e293b;
+}
+
+/* Estilo para las etiquetas del formulario (<label>) */
+form label {
+    margin-bottom: 6px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
 #principal_papi {
-    background-color: #222;
-    color: white;
+    background-color: #0b0f19;
+    color: #64748b;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    padding: 25px;
+    margin-top: 50px;
+    border-top: 1px solid #1e293b;
+    font-size: 0.9rem;
 }
