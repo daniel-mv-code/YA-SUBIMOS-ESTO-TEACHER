@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ESTILOS GENERALES (MODO OSCURO PREMIUM)
+   ESTILOS GENERALES (MODO OSCURO PREMIUM - SDAI)
    ========================================================================== */
 * {
     box-sizing: border-box;
@@ -17,13 +17,15 @@ body {
 }
 
 /* ==========================================================================
-   MENÚ PRINCIPAL (CON DEGRADADO Y NEÓN)
+   MENÚ PRINCIPAL COMPORTAMIENTO STICKY
    ========================================================================== */
 #barra_busqueda {
+    position: -webkit-sticky;
+    position: sticky;        /* REQUERIMIENTO COMPORTAMIENTO: Fijado superior */
+    top: 0;
     background: linear-gradient(90deg, #1e293b, #0f172a);
     padding: 15px 20px;
     border-bottom: 2px solid #00bcd4; /* Línea de neón brillante abajo */
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,34 +33,33 @@ body {
     align-items: center;
     gap: 15px;
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.15);
+    z-index: 1000;          /* Capa sobrepuesta para evitar superposiciones de tarjetas */
 }
 
 #barra_busqueda a {
     color: #94a3b8;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
-    padding: 10px 18px;
-    border-radius: 30px; /* Estilo píldora */
+    padding: 8px 16px;
+    border-radius: 30px;    /* Estilo píldora */
     transition: all 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por los enlaces del menú */
-#barra_busqueda a:hover {
+#barra_busqueda a:hover, #barra_busqueda a.active {
     color: #ffffff;
     background-color: rgba(0, 188, 212, 0.2);
     box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
 }
 
 /* ==========================================================================
-   SECCIÓN SECCIÓN DE BIENVENIDA (HERO GLOW EFFECT)
+   SECCIÓN DE BIENVENIDA (HERO GLOW EFFECT)
    ========================================================================== */
 #seccion_h1 {
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
-    margin-bottom: 30px;
-    
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,8 +68,8 @@ body {
 
 h1 {
     color: #ffffff;
-    font-size: 2.6rem;
-    text-shadow: 0 0 15px rgba(0, 188, 212, 0.6); /* Brillo de neón en el título */
+    font-size: 2.4rem;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.6);
     letter-spacing: 1px;
 }
 
@@ -83,15 +84,16 @@ h1 {
     display: inline-block;
     background: linear-gradient(135deg, #00bcd4, #00838f);
     color: #0f172a;
-    padding: 14px 30px;
+    padding: 12px 26px;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .btn-accion:hover {
@@ -104,44 +106,42 @@ h1 {
    CONTENEDOR DE TARJETAS (FLEXBOX ADAPTABLE)
    ========================================================================== */
 .contenedor-cajas {
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     flex-grow: 1;
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch;
-    gap: 30px;
+    gap: 25px;
 }
 
-/* Estilo Base de las Tarjetas de Información */
+/* Estilo Base de las Tarjetas Relativas */
 .carta_informacion {
-    width: 290px;
-    padding: 30px 25px;
-    border-radius: 16px; /* Bordes más suaves y modernos */
+    position: relative;     /* Se asigna relative para albergar etiquetas absolutas internas */
+    width: 280px;
+    padding: 25px;
+    border-radius: 16px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Efecto de elevación interactivo al pasar el mouse por las tarjetas */
 .carta_informacion:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Caja Content-Box (Color Amarillo Eléctrico) */
+/* Caja Content-Box (Gris Técnico con Borde Amarillo Eléctrico) */
 .caja-content {
     box-sizing: content-box;
-    background: linear-gradient(145deg, #2e2a14, #1a180b);
-    border: 3px solid #ffeb3b;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border: 2px solid #ffeb3b;
 }
 .caja-content:hover {
     border-color: #fff176;
@@ -149,11 +149,11 @@ h1 {
 }
 .caja-content h2 { color: #ffeb3b; }
 
-/* Caja Border-Box (Color Cian Eléctrico) */
+/* Caja Border-Box (Gris Técnico con Borde Cian Neón) */
 .caja-border {
     box-sizing: border-box;
-    background: linear-gradient(145deg, #112936, #091720);
-    border: 3px solid #00bcd4;
+    background: linear-gradient(145deg, #1e293b, #0f172a);
+    border: 2px solid #00bcd4;
 }
 .caja-border:hover {
     border-color: #4dd0e1;
@@ -161,11 +161,10 @@ h1 {
 }
 .caja-border h2 { color: #00bcd4; }
 
-/* Textos dentro de las tarjetas */
 .carta_informacion h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
-    letter-spacing: 0.5px;
+    margin-bottom: 8px;
 }
 
 .carta_informacion p {
@@ -174,22 +173,33 @@ h1 {
     font-size: 0.95rem;
 }
 
-/* Pequeñas etiquetas abajo */
+/* Números grandes de KPIs en los paneles */
+.kpi-numero {
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Pequeñas etiquetas con Posicionamiento Absolute */
 .etiqueta {
-    font-size: 0.75rem;
+    position: absolute;     /* Se extrae del flujo para anclarse en la esquina inferior */
+    bottom: 12px;
+    right: 12px;
+    font-size: 0.7rem;
     font-weight: 800;
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 6px 12px;
+    background-color: rgba(15, 23, 42, 0.8);
+    padding: 4px 10px;
     border-radius: 6px;
-    align-self: flex-start;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 /* ==========================================================================
-   FORMULARIOS RESISTENTES Y LLAMATIVOS
+   FORMULARIOS
    ========================================================================== */
 .input-formulario {
     width: 100%;
@@ -210,12 +220,39 @@ h1 {
     background-color: #1e293b;
 }
 
-/* Estilo para las etiquetas del formulario (<label>) */
 form label {
     margin-bottom: 6px;
     color: #94a3b8;
     font-size: 0.9rem;
     font-weight: 600;
+    display: block; /* Corregido para evitar desalineación */
+}
+
+/* ==========================================================================
+   SOPORTE DE ALERTA TELEFÓNICA (POSICIONAMIENTO FIXED - BOTÓN WHATSAPP)
+   ========================================================================== */
+.btn-soporte-fixed {
+    position: fixed;         /* Fijado respecto a la ventana visual */
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* Verde oficial WhatsApp */
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 2000;           /* Máxima jerarquía visual */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-soporte-fixed:hover {
+    transform: scale(1.05);
+    background-color: #1ebd58;
 }
 
 /* ==========================================================================
@@ -225,8 +262,8 @@ form label {
     background-color: #0b0f19;
     color: #64748b;
     text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+    padding: 20px;
+    margin-top: auto;        /* Empuja el footer abajo en páginas cortas */
     border-top: 1px solid #1e293b;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
