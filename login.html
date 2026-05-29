@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Mecánica - Login</title>
+    <title>SDAI - Login</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -11,37 +11,36 @@
     <nav id="barra_busqueda">
         <a href="index.html">Inicio</a>
         <a href="nosotros.html">Quiénes Somos</a>
-        <a href="login.html" style="background-color: #444; font-weight: bold;">Login</a>
+        <a href="login.html" class="active">Login</a>
         <a href="registro.html">Registro</a>
         <a href="contacto.html">Contacto</a>
-        <a href="panel.html">Panel</a>
+        <a href="panel.html">Panel Admin</a>
     </nav>
 
     <header id="seccion_h1">
-        <h1>Iniciar Sesión</h1>
-        <p>Ingresa tus credenciales para acceder al panel administrativo.</p>
+        <h1>Control de Acceso</h1>
+        <p>Ingrese al entorno seguro para gestionar los nodos del sistema.</p>
     </header>
 
     <main class="contenedor-cajas">
         <div class="carta_informacion caja-border" style="width: 100%; max-width: 400px;">
             <form action="panel.html" method="GET" style="display: flex; flex-direction: column; width: 100%;">
-                <h2>Acceso</h2>
+                <h2>Credenciales</h2>
                 <br>
-                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Correo Electrónico:</label>
-                <input type="email" class="input-formulario" placeholder="ejemplo@correo.com" required>
+                <label>ID de Usuario (Email):</label>
+                <input type="email" class="input-formulario" placeholder="admin@sdai.com" required>
                 
-                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Contraseña:</label>
+                <label>Contraseña Clave de Encriptación:</label>
                 <input type="password" class="input-formulario" placeholder="••••••••" required>
                 
-                <br>
-                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Ingresar</button>
+                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Autenticar</button>
             </form>
             <span class="etiqueta">Seguridad</span>
         </div>
     </main>
 
     <footer id="principal_papi">
-        <p>© 2026 Sistema de Gestión Mecánica - Proyecto Formativo SENA</p>
+        <p>© 2026 SDAI - Sistema de Diagnóstico Automotriz Inteligente - SENA ADSO</p>
     </footer>
 
 </body>
