@@ -1,6 +1,4 @@
-/* ==========================================================================
-   ESTILOS GENERALES (MODO OSCURO PREMIUM - SDAI)
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +6,7 @@
 }
 
 body {
-    background-color: #0f172a; /* Fondo azul oscuro profundo texturizado */
+    background-color: #0f172a; 
     color: #f8fafc;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     display: flex;
@@ -16,16 +14,13 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   MENÚ PRINCIPAL COMPORTAMIENTO STICKY
-   ========================================================================== */
 #barra_busqueda {
     position: -webkit-sticky;
-    position: sticky;        /* REQUERIMIENTO COMPORTAMIENTO: Fijado superior */
+    position: sticky;       
     top: 0;
     background: linear-gradient(90deg, #1e293b, #0f172a);
     padding: 15px 20px;
-    border-bottom: 2px solid #00bcd4; /* Línea de neón brillante abajo */
+    border-bottom: 2px solid #00bcd4; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -33,7 +28,7 @@ body {
     align-items: center;
     gap: 15px;
     box-shadow: 0 4px 15px rgba(0, 188, 212, 0.15);
-    z-index: 1000;          /* Capa sobrepuesta para evitar superposiciones de tarjetas */
+    z-index: 1000;         
 }
 
 #barra_busqueda a {
@@ -42,7 +37,7 @@ body {
     font-size: 14px;
     font-weight: 600;
     padding: 8px 16px;
-    border-radius: 30px;    /* Estilo píldora */
+    border-radius: 30px;    
     transition: all 0.3s ease;
 }
 
@@ -52,9 +47,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
 }
 
-/* ==========================================================================
-   SECCIÓN DE BIENVENIDA (HERO GLOW EFFECT)
-   ========================================================================== */
+
 #seccion_h1 {
     text-align: center;
     padding: 50px 20px;
@@ -102,9 +95,7 @@ h1 {
     filter: brightness(1.1);
 }
 
-/* ==========================================================================
-   CONTENEDOR DE TARJETAS (FLEXBOX ADAPTABLE)
-   ========================================================================== */
+
 .contenedor-cajas {
     max-width: 1200px;
     margin: 0 auto;
@@ -118,9 +109,9 @@ h1 {
     gap: 25px;
 }
 
-/* Estilo Base de las Tarjetas Relativas */
+
 .carta_informacion {
-    position: relative;     /* Se asigna relative para albergar etiquetas absolutas internas */
+    position: relative;     
     width: 280px;
     padding: 25px;
     border-radius: 16px;
@@ -137,7 +128,7 @@ h1 {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Caja Content-Box (Gris Técnico con Borde Amarillo Eléctrico) */
+
 .caja-content {
     box-sizing: content-box;
     background: linear-gradient(145deg, #1e293b, #0f172a);
@@ -149,7 +140,7 @@ h1 {
 }
 .caja-content h2 { color: #ffeb3b; }
 
-/* Caja Border-Box (Gris Técnico con Borde Cian Neón) */
+
 .caja-border {
     box-sizing: border-box;
     background: linear-gradient(145deg, #1e293b, #0f172a);
@@ -173,7 +164,7 @@ h1 {
     font-size: 0.95rem;
 }
 
-/* Números grandes de KPIs en los paneles */
+
 .kpi-numero {
     font-size: 3rem;
     font-weight: 800;
@@ -182,9 +173,9 @@ h1 {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Pequeñas etiquetas con Posicionamiento Absolute */
+
 .etiqueta {
-    position: absolute;     /* Se extrae del flujo para anclarse en la esquina inferior */
+    position: absolute;    
     bottom: 12px;
     right: 12px;
     font-size: 0.7rem;
@@ -198,9 +189,7 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* ==========================================================================
-   FORMULARIOS
-   ========================================================================== */
+
 .input-formulario {
     width: 100%;
     padding: 12px 15px;
@@ -225,17 +214,15 @@ form label {
     color: #94a3b8;
     font-size: 0.9rem;
     font-weight: 600;
-    display: block; /* Corregido para evitar desalineación */
+    display: block; 
 }
 
-/* ==========================================================================
-   SOPORTE DE ALERTA TELEFÓNICA (POSICIONAMIENTO FIXED - BOTÓN WHATSAPP)
-   ========================================================================== */
+
 .btn-soporte-fixed {
-    position: fixed;         /* Fijado respecto a la ventana visual */
+    position: fixed;         
     bottom: 20px;
     right: 20px;
-    background-color: #25d366; /* Verde oficial WhatsApp */
+    background-color: #25d366; 
     color: #ffffff;
     padding: 12px 20px;
     border-radius: 30px;
@@ -243,7 +230,7 @@ form label {
     font-size: 14px;
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    z-index: 2000;           /* Máxima jerarquía visual */
+    z-index: 2000;          
     display: flex;
     align-items: center;
     gap: 8px;
@@ -255,15 +242,13 @@ form label {
     background-color: #1ebd58;
 }
 
-/* ==========================================================================
-   FOOTER (PIE DE PÁGINA)
-   ========================================================================== */
+
 #principal_papi {
     background-color: #0b0f19;
     color: #64748b;
     text-align: center;
     padding: 20px;
-    margin-top: auto;        /* Empuja el footer abajo en páginas cortas */
+    margin-top: auto;       
     border-top: 1px solid #1e293b;
     font-size: 0.85rem;
 }
