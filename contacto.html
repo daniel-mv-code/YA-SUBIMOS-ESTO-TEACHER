@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Mecánica - Contacto</title>
+    <title>SDAI - Contacto</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -13,38 +13,39 @@
         <a href="nosotros.html">Quiénes Somos</a>
         <a href="login.html">Login</a>
         <a href="registro.html">Registro</a>
-        <a href="contacto.html" style="background-color: #444; font-weight: bold;">Contacto</a>
-        <a href="panel.html">Panel</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        <a href="panel.html">Panel Admin</a>
     </nav>
 
     <header id="seccion_h1">
-        <h1>Contáctanos</h1>
-        <p>¿Tienes dudas o necesitas soporte técnico técnico? Escríbenos.</p>
+        <h1>Mesa de Control y Soporte</h1>
+        <p>¿Requiere asistencia técnica con la integración del escáner vehicular? Contáctenos.</p>
     </header>
 
     <main class="contenedor-cajas">
         <div class="carta_informacion caja-border" style="width: 100%; max-width: 500px;">
             <form style="display: flex; flex-direction: column; width: 100%;">
-                <h2>Enviar Mensaje</h2>
+                <h2>Radicar Ticket</h2>
                 <br>
-                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Asunto:</label>
-                <input type="text" class="input-formulario" placeholder="Soporte Técnico / Consulta Comercial" required>
+                <label>Asunto Institucional:</label>
+                <input type="text" class="input-formulario" placeholder="Falla de Conexión OBD / Error de Token API" required>
                 
-                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Correo de Contacto:</label>
-                <input type="email" class="input-formulario" placeholder="tu@correo.com" required>
+                <label>Correo Electrónico:</label>
+                <input type="email" class="input-formulario" placeholder="ingeniero@taller.com" required>
                 
-                <label style="margin-bottom: 5px; color: #333; font-weight: bold;">Mensaje:</label>
-                <textarea class="input-formulario" rows="5" placeholder="Escribe detalladamente tu solicitud aquí..." style="resize: none; font-family: Arial, sans-serif;"></textarea>
+                <label>Descripción del Evento:</label>
+                <textarea class="input-formulario" rows="4" placeholder="Indique los códigos de error devueltos por el sistema..." style="resize: none; font-family: inherit;"></textarea>
                 
-                <br>
-                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Enviar Solicitud</button>
+                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Abrir Caso</button>
             </form>
-            <span class="etiqueta">Soporte</span>
+            <span class="etiqueta">SDAI-Help</span>
         </div>
     </main>
 
+    <a href="https://wa.me/573000000000" class="btn-soporte-fixed" target="_blank">💬 WhatsApp SDAI</a>
+
     <footer id="principal_papi">
-        <p>© 2026 Sistema de Gestión Mecánica - Proyecto Formativo SENA</p>
+        <p>© 2026 SDAI - Sistema de Diagnóstico Automotriz Inteligente - SENA ADSO</p>
     </footer>
 
 </body>
