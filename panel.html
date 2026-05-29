@@ -3,71 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión Mecánica - Panel</title>
+    <title>SDAI - Panel Central</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
     <nav id="barra_busqueda">
         <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quiénes Somos</a>
-        <a href="login.html">Login</a>
-        <a href="registro.html">Registro</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="panel.html" style="background-color: #444; font-weight: bold;">Panel</a>
+        <a href="productos.html">Productos/Servicios</a>
+        <a href="usuarios.html">Usuarios</a>
+        <a href="roles.html">Roles</a>
+        <a href="proveedores.html">Proveedores</a>
+        <a href="panel_cliente.html" style="border: 1px solid #00bcd4;">Vista Cliente</a>
+        <a href="panel.html" class="active">Panel Admin</a>
     </nav>
 
     <header id="seccion_h1">
-        <h1>Panel de Administración</h1>
-        <p>Vista general del estado de las operaciones de tu taller en tiempo real.</p>
+        <h1>Consola Central del Administrador</h1>
+        <p>Telemetría en tiempo real de vehículos conectados e inventario de hardware.</p>
     </header>
 
     <main class="contenedor-cajas">
         
         <div class="carta_informacion caja-content">
             <div>
-                <h2>Vehículos Activos</h2>
-                <br>
-                <h1 style="color: #222; font-size: 3rem; text-align: center;">42</h1>
-                <p style="text-align: center;">Autos actualmente en reparación.</p>
+                <h2>Vehículos en Sincronización</h2>
+                <h1 class="kpi-numero" style="color: #00bcd4;">42</h1>
+                <p style="text-align: center;">Escaners activos enlazados por API.</p>
             </div>
-            <span class="etiqueta">KPI - Operaciones</span>
+            <span class="etiqueta">Módulos IOT</span>
         </div>
 
         <div class="carta_informacion caja-border">
             <div>
-                <h2>Órdenes Listas</h2>
-                <br>
-                <h1 style="color: #222; font-size: 3rem; text-align: center;">15</h1>
-                <p style="text-align: center;">Pendientes por entrega al dueño.</p>
+                <h2>Alertas Críticas</h2>
+                <h1 class="kpi-numero" style="color: #ff3b30;">3</h1>
+                <p style="text-align: center;">Fallas severas de motor detectadas hoy.</p>
             </div>
-            <span class="etiqueta">KPI - Despachos</span>
+            <span class="etiqueta" style="background-color: #7f1d1d;">Atención</span>
         </div>
 
         <div class="carta_informacion caja-content">
             <div>
-                <h2>Alertas de Inventario</h2>
-                <br>
-                <h1 style="color: #d32f2f; font-size: 3rem; text-align: center;">3</h1>
-                <p style="text-align: center;">Repuestos con stock bajo.</p>
+                <h2>Estaciones Libres</h2>
+                <h1 class="kpi-numero" style="color: #00bcd4;">8</h1>
+                <p style="text-align: center;">Bahías mecánicas desocupadas.</p>
             </div>
-            <span class="etiqueta" style="background-color: #ffcdd2;">Alerta Crítica</span>
-        </div>
-
-        <div class="carta_informacion caja-border">
-            <div>
-                <h2>Eficiencia Total</h2>
-                <br>
-                <h1 style="color: #222; font-size: 3rem; text-align: center;">96%</h1>
-                <p style="text-align: center;">Satisfacción registrada este mes.</p>
-            </div>
-            <span class="etiqueta">KPI - Calidad</span>
+            <span class="etiqueta">Infraestructura</span>
         </div>
 
     </main>
 
     <footer id="principal_papi">
-        <p>© 2026 Sistema de Gestión Mecánica - Proyecto Formativo SENA</p>
+        <p>© 2026 SDAI - Sistema de Diagnóstico Automotriz Inteligente - SENA ADSO</p>
     </footer>
 
 </body>
