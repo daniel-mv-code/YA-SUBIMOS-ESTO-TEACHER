@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDAI - Login</title>
-    <link rel="stylesheet" href="estilos.css">
+    <title>SDAI - Registro</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
 </head>
 <body>
 
     <nav id="barra_busqueda">
         <a href="index.html">Inicio</a>
         <a href="nosotros.html">Quiénes Somos</a>
-        <a href="login.html" class="active">Login</a>
-        <a href="registro.html">Registro</a>
+        <a href="login.html">Login</a>
+        <a href="registro.html" class="active">Registro</a>
         <a href="contacto.html">Contacto</a>
         <a href="panel.html">Panel Admin</a>
     </nav>
 
     <header id="seccion_h1">
-        <h1>Control de Acceso</h1>
-        <p>Ingrese al entorno seguro para gestionar los nodos del sistema.</p>
+        <h1>Alta de Estación de Diagnóstico</h1>
+        <p>Inscriba su taller para sincronizar sus herramientas con la nube del SDAI.</p>
     </header>
 
     <main class="contenedor-cajas">
-        <div class="carta_informacion caja-border" style="width: 100%; max-width: 400px;">
-            <form action="panel.html" method="GET" style="display: flex; flex-direction: column; width: 100%;">
-                <h2>Credenciales</h2>
+        <div class="carta_informacion caja-content" style="width: 100%; max-width: 450px;">
+            <form style="display: flex; flex-direction: column; width: 100%;">
+                <h2>Registro Inicial</h2>
                 <br>
-                <label>ID de Usuario (Email):</label>
-                <input type="email" class="input-formulario" placeholder="admin@sdai.com" required>
+                <label>Administrador Responsable:</label>
+                <input type="text" class="input-formulario" placeholder="Ing. Carlos Mendoza" required>
+
+                <label>Razón Social del CDA/Taller:</label>
+                <input type="text" class="input-formulario" placeholder="Centro de Diagnóstico Automotriz del Norte" required>
                 
-                <label>Contraseña Clave de Encriptación:</label>
-                <input type="password" class="input-formulario" placeholder="••••••••" required>
+                <label>Canal Electrónico Corporativo:</label>
+                <input type="email" class="input-formulario" placeholder="contacto@cdanorte.com" required>
                 
-                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Autenticar</button>
+                <label>Clave Maestra:</label>
+                <input type="password" class="input-formulario" placeholder="Al menos 8 caracteres" required>
+                
+                <button type="submit" class="btn-accion" style="border: none; width: 100%;">Crear Entorno</button>
             </form>
-            <span class="etiqueta">Seguridad</span>
+            <span class="etiqueta">Nuevo Nodo</span>
         </div>
     </main>
 
